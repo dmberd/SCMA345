@@ -18,19 +18,19 @@ def merge(a,l,s,r):
 def sortstraight(a):
     t=len(a); n=1
     while n<t: 
-       m=n
-       n=2*n
-       if t>=n:
-          for i in range(0,t//n):
-              l=i*n
-              s=l+m-1
-              r=l+n-1
-              merge(a,l,s,r)
-       if t%n > m: 
-          i=t//n
-          l=i*n
-          s=l+m-1           
-          r=t-1           
-          merge(a,l,s,r)      
+        m=n
+        n=2*n
+        if t>=n:
+            for i in range(0,t//n):
+                l=i*n
+                s=l+m-1
+                r=l+n-1
+                merge(a,l,s,r)
+        if t%n > m: 
+            i=t//n
+            l=i*n
+            s=l+m-1           
+            r=t-1           
+            merge(a,l,s,r)      
     return a
 print(sortstraight([4,2,3,9,0,-7,1,2,3,4,5,6,-8]))

@@ -11,7 +11,7 @@ swapped=False
 
 while swapped==False:
     for i in range(1,m):
-         if a[i]<a[i-1]: 
+        if a[i]<a[i-1]: 
             swap(a,i)
             swapped=True
             n=i 

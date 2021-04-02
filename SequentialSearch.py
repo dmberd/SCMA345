@@ -5,7 +5,7 @@ def seqsearch(a,key):
     return "the key has not been found"
 def main(): 
     a=[2,5,7,1,8,9,10]
-    result=seqsearch(a,11)
+    result=seqsearch(a,1)
     print(result)
     
 main() 

@@ -5,7 +5,7 @@ def seeksource(G):
             if u in G[v]: 
                 source=False
         if source:
-            return u; break 
+            return u
 
 def sorting(G): 
     while G:

@@ -1,6 +1,6 @@
 a=[1,5,7,1,3,4,8,0,5,3,-1,-3]
 l=len(a)-1
-gap = (4,3)
+gap = (4,3,1)
 def insertionsort(a,h,j): 
     def dragleft(a,k): 
         a[(k+1)*h+j]=a[k*h+j]
@@ -14,8 +14,8 @@ def insertionsort(a,h,j):
         c=a[i*h+j]
         k=i-1
         while k>=0 and a[k*h+j]>a[(k+1)*h+j]:
-              dragleft(a,k)
-              k=k-1
+            dragleft(a,k)
+            k=k-1
     return a
 
 for i in range(0,len(gap)): 

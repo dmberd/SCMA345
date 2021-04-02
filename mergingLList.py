@@ -60,7 +60,7 @@ def mergelists(list1,list2):
 
     return newlist
 
-list1=create_list_from_head([3,4])
+list1=create_list_from_head([3,4,6])
 list2=create_list_from_head([1,4,5,7])
 
 printlist(mergelists(list1,list2))

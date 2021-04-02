@@ -3,7 +3,8 @@ class BinHeap:
     def __init__(self):
         self.heapList = [0]
         self.currentSize = 0
-    
+        
+#########################################################    
 #    def percUp(self,i):
 #        while i // 2 > 0:
 #            if self.heapList[i] > self.heapList[i // 2]:
@@ -16,7 +17,8 @@ class BinHeap:
 #        self.heapList.append(k)
 #        self.currentSize = self.currentSize + 1
 #        self.percUp(self.currentSize)    
-        
+#########################################################    
+
     def percDown(self,i):
         while (i * 2) <= self.currentSize:
             mc = self.maxChild(i)
@@ -52,7 +54,7 @@ class BinHeap:
             i = i - 1
      
 
-a=[6,-1,5,7]
+a=[6,-1,5,7,7,-5,11,-3,-2]
 
 heap=BinHeap() 
 

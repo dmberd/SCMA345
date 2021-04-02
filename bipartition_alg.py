@@ -1,5 +1,5 @@
 def Bipartition(G): 
-    colour={}; blue=[]; red=[]; 
+    colour={}; blue=[]; red=[] 
     
     bipartite=True
     
@@ -10,7 +10,7 @@ def Bipartition(G):
             colour, red,blue, bipartite = BFSvisit(G,v,colour,red,blue,bipartite) 
         if bipartite==False: 
             return red,blue, bipartite
-            break     
+            
         
     return red,blue, bipartite 
 

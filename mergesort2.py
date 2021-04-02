@@ -17,11 +17,11 @@ def merge(a,l,s,r):
 
 def mergesort(a,l,r):
     if l<r: 
-       s=int((l+r)/2)
-       mergesort(a,l,s)
-       mergesort(a,s+1,r)
-       return merge(a,l,s,r)
+        s=int((l+r)/2)
+        mergesort(a,l,s)
+        mergesort(a,s+1,r)
+        return merge(a,l,s,r)
     else: 
-       return a
+        return a
 a=[2,1,4,5,2,-9,8,8,56,-5,-3,5,5,2,1,4,1,0]
 print(mergesort(a,0,len(a)-1))   

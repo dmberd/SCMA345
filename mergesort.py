@@ -15,9 +15,9 @@ def merge(a,b):
 
 def mergesort(a):
     if len(a)>1: 
-       m=int(len(a)/2)
-       return merge(mergesort(a[0:m]),mergesort(a[m:len(a)]))
+        m=int(len(a)/2)
+        return merge(mergesort(a[0:m]),mergesort(a[m:len(a)]))
     else: 
-       return a
+        return a
 
-print(mergesort([4,2,1,5,6]))
+print(mergesort([4,2,1,5,6,9,3,2,11,2]))
