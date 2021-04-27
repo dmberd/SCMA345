@@ -1,5 +1,5 @@
 def BFS(G): 
-    colour={} # pred={}; done={}
+    colour={} # pred, done
     for v in G.keys(): 
         colour[v]="WHITE" # pred[i]=None     
     for v in G.keys(): 
@@ -9,11 +9,9 @@ def BFS(G):
 def BFSvisit(G,node,colour):
     queue=[]
     colour[node]="GREY" # d[s]=0 
-    # seen[node]=time; time=time+1
     queue.insert(0,node)
-   
-    # printing node 
-    print(node,' ')    
+    
+    print(node,' ') # printing node    
    
     while queue:
         

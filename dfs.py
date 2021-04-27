@@ -1,20 +1,17 @@
 def DFS(G): 
-    colour={} # pred={}; seen={}; done={}
+    colour={} # pred, seen, done
     for i in G.keys(): 
-        colour[i]="WHITE" # pred[i]=None 
-    # time=0    
+        colour[i]="WHITE" # pred[i]=None     
     for i in G.keys(): 
         if colour[i]=="WHITE":
             DFSvisit(G,i,colour)
     
 def DFSvisit(G,node,colour):
     stack=[]
-    colour[node]="GREY"
-    # seen[node]=time; time=time+1
+    colour[node]="GREY" # seen[node]=time; time=time+1
     stack.append(node)
-   
-    # printing node 
-    print(node,' ')    
+    
+    print(node,' ') # printing node    
    
     while stack:
         
@@ -28,18 +25,14 @@ def DFSvisit(G,node,colour):
                 break
         
         if whitenbr==True:    
-            colour[v]="GREY"
-            # pred[v]=u; seen[v]=time; 
-            #time=time+1
+            colour[v]="GREY" # pred[v]=u; seen[v]=time; time=time+1
             stack.append(v)
-            
-            # printing node 
-            print(v)
+                    
+            print(v) # printing node
         
         else: 
             stack.pop()
-            colour[u]="BLACK"
-            # done[u]=time; time=time+1
+            colour[u]="BLACK" # done[u]=time; time=time+1
     return colour            
 def main():
     

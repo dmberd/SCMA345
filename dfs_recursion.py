@@ -1,25 +1,20 @@
 def DFS(G): 
-    colour={} # pred={}; seen={}; done={}
+    colour={} # pred, seen, done
     for i in G.keys(): 
-        colour[i]="WHITE" # pred[i]=None 
-    # time=0    
+        colour[i]="WHITE" # pred[i]=None; time=0    
     for i in G.keys(): 
         if colour[i]=="WHITE":
             recursiveDFSvisit(G,i,colour)
     
 def recursiveDFSvisit(G,node,colour):
-    colour[node]="GREY"
-    # seen[node]=time; time=time+1
-   
-    # printing node 
-    print(node,' ')    
+    colour[node]="GREY"  # seen[node]=time;  time=time+1
+    
+    print(node,' ') # printing node    
    
     for v in G[node]: 
-        if colour[v]=="WHITE": 
-            #pred[v]=node    
+        if colour[v]=="WHITE":             #pred[v]=node    
             recursiveDFSvisit(G,v,colour)
-    colour[node]="BLACK"     
-    # done[s]=time; time = time + 1
+    colour[node]="BLACK" # done[s]=time;  time=time+1
                 
 def main():
     

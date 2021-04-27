@@ -2,8 +2,8 @@ def DFS(G):
     colour={} # pred={}; seen={}; done={}
     number=0
     for i in G.keys(): 
-        colour[i]="WHITE" # pred[i]=None 
-    # time=0    
+        colour[i]="WHITE"  
+       
     for i in G.keys(): 
         if colour[i]=="WHITE":
             number=number+1
@@ -12,11 +12,10 @@ def DFS(G):
 def DFSvisit(G,node,colour,number):
     stack=[]
     colour[node]="GREY"
-    # seen[node]=time; time=time+1
+    
     stack.append(node)
-   
-    # printing node 
-    print('The nodes of a component N ',number,':')
+    
+    print('The nodes of a component N ',number,':')  # printing node
     print(node,' ')    
    
     while stack:
@@ -32,17 +31,15 @@ def DFSvisit(G,node,colour,number):
         
         if whitenbr==True:    
             colour[v]="GREY"
-            # pred[v]=u; seen[v]=time; 
-            #time=time+1
-            stack.append(v)
-            
-            # printing node 
-            print(v)
+           
+            stack.append(v)          
+             
+            print(v)  # printing node
         
         else: 
             stack.pop()
             colour[u]="BLACK"
-            # done[u]=time; time=time+1
+            
     return colour            
 def main():
     

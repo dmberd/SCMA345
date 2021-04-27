@@ -1,3 +1,5 @@
+# NB: This algorithm to compute the girth of a graph is not optimal. 
+
 def girth(G): 
     
     mincycle=len(G)+1 
@@ -34,9 +36,9 @@ def BFSvisit(G,node):
     queue=[]; queue.insert(0,node)
    
 
-    stop=False; cycle_len=len(G)+1; level=len(G)+1 
+    cycle_len=len(G)+1; level=len(G)+1 
    
-    while queue and stop==False and d[queue[len(queue)-1]]<=level:
+    while queue and d[queue[len(queue)-1]]<=level:
         
         u=queue[len(queue)-1]
        
@@ -46,8 +48,7 @@ def BFSvisit(G,node):
                 queue.insert(0,v)
             elif colour[v]=="GREY": 
                 if not root_is_the_only_common_vertex(pred,node,u,v): 
-                    stop=True
-                    break
+                    return len(G)+1 # the shortest cycle does not contain the root 
                 else: 
                     level=d[u]
                     if d[u]+d[v]+1 < cycle_len:   
@@ -56,10 +57,7 @@ def BFSvisit(G,node):
         queue.pop()     
         colour[u]="BLACK"
     
-    if stop==True: 
-        return len(G)+1
-    else: 
-        return cycle_len   
+    return cycle_len   
 
 def main():
     
