@@ -33,6 +33,7 @@ def print_out_augmenting_path (pred,v):
 def main(): 
     # A given graph must be bipartite.
     
+
     # Test 1
     G1={0:[3],1:[3,4,5],2:[4],3:[0],4:[1,2],5:[1]}  # graph
     M=[None]*6
@@ -44,6 +45,7 @@ def main():
         print ("There is no augmenting path starting from the vertex",x)
     else: 
         print_out_augmenting_path(AugmentingPath[0],AugmentingPath[1])
+
 
     # Test 2
     G2={0:[4,5],1:[5,7],2:[4,6,8],3:[6],4:[0,2],5:[0,1],6:[2,3],7:[1],8:[2]} # graph
